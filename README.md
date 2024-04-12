@@ -39,8 +39,9 @@ I decided to create this repository to share my solution and help others who mig
 This repository contains multiple subdirectories, each one containing a solution in a different language as well as an example on how to use it.
 
 The current languages available are:
-- PowerShell
-- Python
+- [PowerShell](https://github.com/Laendrun/BusinessCentralBlob/tree/main/PowerShell)
+- [Python](https://github.com/Laendrun/BusinessCentralBlob/tree/main/Python)
+- [TypeScript](https://github.com/Laendrun/BusinessCentralBlob/tree/main/TypeScript)
 
 To use the solution in a specific language, you can follow the instructions in the README.md file of the corresponding subdirectory.
 
