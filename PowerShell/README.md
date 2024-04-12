@@ -61,11 +61,11 @@ You can find an example in the `example.ps1` file.
 
 To run the example script, you can use the following command:
 
-```powershell
+```
 PS> .\example.ps1 -Text "Hello, World!"
 PS> 02457D5BF348CDC9C9D75108CF2FCA49510400
 PS>
-PS> .\example.ps1 -Blob "02457D5BF348CDC9C9D75108CF2FCA49510400"
+PS> .\example.ps1 -Blob "0x02457D5BF348CDC9C9D75108CF2FCA49510400"
 PS> Hello, World!
 PS>
 PS> .\example.ps1 -Text "Hello, World!" -Blob "02457D5BF348CDC9C9D75108CF2FCA49510400"
