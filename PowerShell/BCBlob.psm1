@@ -3,6 +3,8 @@ function ConvertBlobToText {
 		[string]$hexString
 	)
 
+	$blob_magic = [byte[]]@(2, 69, 125, 91)
+
 	if ($hexString.Substring(0, 2) -eq "0x") {
 		$hexString = $hexString.Substring(2)
 	}
@@ -15,9 +17,9 @@ function ConvertBlobToText {
 		return $null
 	}
 
-    # Check if first four bytes match the magic header
+	# Check if first four bytes match the magic header
 	$firstFourBytes = $inBytes[0..3]
-	if (-not (blobMagicOk($firstFourBytes))) {
+	if (-not (($firstFourBytes -join ',') -eq ($blob_magic -join ','))) {
 		return $null
 	}
 
@@ -77,11 +79,28 @@ function ConvertTextToBlob {
 	}
 }
 
-function blobMagicOk {
+function ConvertBlobsToTexts {
 	param (
-		[byte[]]$checkMagic
+		[string[]]$hexStrings
 	)
 
-	$blob_magic = [byte[]]@(2, 69, 125, 91)
-	return ($checkMagic -join ',') -eq ($blob_magic -join ',')
+	$texts = @()
+	$hexStrings | ForEach-Object {
+		$texts += ConvertBlobToText($_)
+	}
+
+	return $texts
+}
+
+function ConvertTextsToBlobs {
+	param (
+		[string[]]$texts
+	)
+
+	$hexStrings = @()
+	$texts | ForEach-Object {
+		$hexStrings += ConvertTextToBlob($_)
+	}
+
+	return $hexStrings
 }
