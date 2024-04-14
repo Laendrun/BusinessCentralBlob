@@ -4,6 +4,8 @@ This repository contains a simple TypeScript module that contains two functions 
 
 - `ConvertBlobToText`: Converts a Blob to a text.
 - `ConvertTextToBlob`: Converts a text to a Blob.
+- `ConvertBlobsToTexts`: Converts an array of Blobs to an array of texts.
+- `ConvertTextsToBlobs`: Converts an array of texts to an array of Blobs.
 
 ## How to use
 

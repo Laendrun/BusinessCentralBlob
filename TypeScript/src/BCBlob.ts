@@ -43,3 +43,23 @@ export const ConvertTextToBlob = (text: string): string|undefined => {
 		blob += blob_bytes[i].toString(16).padStart(2, "0")
 	return blob
 }
+
+export const ConvertBlobsToTexts = (blobs: string[]): string[] => {
+	let texts: string[] = []
+	for (let i = 0; i < blobs.length; i++) {
+		let text = ConvertBlobToText(blobs[i])
+		if (text)
+			texts.push(text)
+	}
+	return texts
+}
+
+export const ConvertTextsToBlobs = (texts: string[]): string[] => {
+	let blobs: string[] = []
+	for (let i = 0; i < texts.length; i++) {
+		let blob = ConvertTextToBlob(texts[i])
+		if (blob)
+			blobs.push(blob)
+	}
+	return blobs
+}
