@@ -4,6 +4,8 @@ This repository contains a simple module that contains two functions to convert 
 
 - `ConvertTextToBlob`: Converts a text to a Blob.
 - `ConvertBlobToText`: Converts a Blob to a text.
+- `ConvertBlobsToTexts`: Converts an array of Blobs to an array of texts.
+- `ConvertTextsToBlobs`: Converts an array of texts to an array of Blobs.
 
 ## How to use
 
