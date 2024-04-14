@@ -75,4 +75,4 @@ If you find a mistake in one of the solutions, please open an issue so I can fix
 
 ## License
 
-This repository is licensed under the MIT License. You can find more information in the [LICENSE](LICENSE) file.
+This repository is licensed under the LGPL-3.0 License. You can find more information in the [LICENSE](LICENSE) file.
