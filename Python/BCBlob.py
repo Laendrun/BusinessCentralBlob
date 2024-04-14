@@ -43,3 +43,9 @@ def ConvertTextToBlob(text: str) -> str:
 	except Exception as e:
 		print("Error occurred during compression:", e)
 		return None
+
+def ConvertBlobsToText(blobs: list) -> list:
+	return [ConvertBlobToText(blob) for blob in blobs]
+
+def ConvertTextsToBlob(texts: list) -> list:
+	return [ConvertTextToBlob(text) for text in texts]

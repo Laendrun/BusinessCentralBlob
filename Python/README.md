@@ -4,6 +4,8 @@ This repository contains a simple module that contains two functions to convert 
 
 - `ConvertBlobToText`: Converts a Blon to a text.
 - `ConvertTextToBlob`: Converts a text to a Blob.
+- `ConvertBlobsToTexts`: Converts a list of Blobs to a list of texts.
+- `ConvertTextsToBlobs`: Converts a list of texts to a list of Blobs.
 
 ## How to use
 
